@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RondellTech Matrix To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>RondellTech To-Do List</h1>
+    <p class="credit">Programmed By: Rondell R. Caindoc</p>
+    
+    <div class="input-section">
+      <input type="text" id="task-input" placeholder="Add a new task..." />
+      <select id="priority">
+        <option value="low">Can Wait</option>
+        <option value="medium">Needs Attention</option>
+        <option value="high">Important</option>
+      </select>
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="task-summary">
+      <span>Total: <span id="total">0</span></span>
+      <span>Done: <span id="completed">0</span></span>
+    </div>
+
+    <div class="filters">
+      <button onclick="filterTasks('all')" class="active">All Tasks</button>
+      <button onclick="filterTasks('active')">Active</button>
+      <button onclick="filterTasks('completed')">Completed</button>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <!-- Modal for Editing Task -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <h2>Edit Task</h2>
+      <input type="text" id="edit-input" />
+      <div class="modal-buttons">
+        <button onclick="saveEdit()">💾 Save</button>
+        <button onclick="closeModal()">❌ Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

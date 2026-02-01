@@ -1,0 +1,284 @@
+/* MATRIX THEME */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url('matrix-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ff00;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #00ff00;
+  padding: 25px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px #00ff00;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  from { box-shadow: 0 0 10px #00ff00; }
+  to { box-shadow: 0 0 20px #00ff00; }
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.credit {
+  text-align: center;
+  color: #0aff0a;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-section input,
+.input-section select {
+  flex: 1;
+  padding: 8px;
+  background: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+}
+
+.input-section button {
+  background: #00ff00;
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ff00;
+  transition: 0.3s;
+}
+
+.input-section button:hover {
+  background: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+.task-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  background: transparent;
+  border: 1px solid #00ff00;
+  padding: 6px 10px;
+  color: #00ff00;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filters .active {
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #00ff00;
+  border-radius: 10px;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: #0f0;
+}
+
+.priority {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.priority.low {
+  background: #004d00;
+  color: #0f0;
+}
+
+.priority.medium {
+  background: #007700;
+  color: #fff;
+}
+
+.priority.high {
+  background: #00ff00;
+  color: black;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.task-actions button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #00ff00;
+}
+
+.task-actions button:hover {
+  color: #0f0;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #000;
+  border: 2px solid #00ff00;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ff00;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #00ff00;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.modal-buttons button {
+  margin: 0 10px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ff00;
+  transition: 0.3s;
+  background: #00ff00;
+  color: black;
+}
+
+.modal-buttons button:hover {
+  background: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+
+/* Futuristic Animation Enhancements */
+
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+  50% {
+    text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 45px #00ff00;
+  }
+  100% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+}
+
+.container {
+  animation: neon-glow 3s ease-in-out infinite alternate;
+}
+
+.task {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.task:hover {
+  transform: scale(1.02);
+  background: rgba(0, 255, 0, 0.1);
+}
+
+button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+.modal-content {
+  animation: fadeInZoom 0.5s ease forwards;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
